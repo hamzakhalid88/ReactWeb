@@ -51,7 +51,7 @@ export default function TextForm(props) {
             <button className="btn btn-primary mx-2" onClick={handleCopy}>Copy Text</button>
             <button className="btn btn-primary mx-2" onClick={handleExtraSpace}>Remove Extra Space</button>
             <h1>Your Text Summary</h1>
-            <p>{text.split(" ").length} words and {text.length} characters</p>
+            <p>{text.split(/[ ]+/).filter((a1)=>{return a1.length!=0}).length} words and {text.length} characters</p>
             <p>{0.008 *text.split(" ").length } Minutes read</p>
             <h2>Preview</h2>
             <p>{text.length>0?text:"Enter something in the TextBox above to preview it here"}</p>
