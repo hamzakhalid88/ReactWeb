@@ -45,11 +45,11 @@ export default function TextForm(props) {
             <div className="mb-3">
             <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="10"></textarea>
             </div>
-            <button className="btn btn-primary" onClick={handleUpClick}>Convert To Uppercase</button>
-            <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert To Lowercase</button>
-            <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</button>
-            <button className="btn btn-primary mx-2" onClick={handleCopy}>Copy Text</button>
-            <button className="btn btn-primary mx-2" onClick={handleExtraSpace}>Remove Extra Space</button>
+            <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>Convert To Uppercase</button>
+            <button className="btn btn-primary mx-2 my-2" onClick={handleLoClick}>Convert To Lowercase</button>
+            <button className="btn btn-primary mx-2 my-2" onClick={handleClearClick}>Clear Text</button>
+            <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>Copy Text</button>
+            <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpace}>Remove Extra Space</button>
             <h1>Your Text Summary</h1>
             <p>{text.split(/[ ]+/).filter((a1)=>{return a1.length!=0}).length} words and {text.length} characters</p>
             <p>{0.008 *text.split(" ").length } Minutes read</p>
